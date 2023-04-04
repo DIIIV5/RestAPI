@@ -1,0 +1,67 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0a2d7e7c-3626-4be8-9b30-7edeb044e1d5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Project1.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Project1</Name>
+    <RootNamespace>Project1</RootNamespace>
+    <InterpreterId>Global|VisualStudio|MyEnv</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.py" />
+    <Compile Include=".flaskenv" />
+    <Compile Include="blocklist.py" />
+    <Compile Include="db.py" />
+    <Compile Include="models\item.py" />
+    <Compile Include="models\item_tags.py" />
+    <Compile Include="models\store.py" />
+    <Compile Include="models\tag.py" />
+    <Compile Include="models\user.py" />
+    <Compile Include="models\__init__.py" />
+    <Compile Include="Project1.py" />
+    <Compile Include="resources\item.py" />
+    <Compile Include="resources\store.py" />
+    <Compile Include="resources\tag.py" />
+    <Compile Include="resources\user.py" />
+    <Compile Include="schemas.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|.venv" />
+    <InterpreterReference Include="Global|VisualStudio|MyEnv" />
+    <InterpreterReference Include="Global|VisualStudio|Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="models\__pycache__\item.cpython-310.pyc" />
+    <Content Include="models\__pycache__\store.cpython-310.pyc" />
+    <Content Include="models\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="models\" />
+    <Folder Include="models\__pycache__\" />
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
